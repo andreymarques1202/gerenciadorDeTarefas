@@ -203,7 +203,7 @@ const FormPassword = () => {
         try {
             const token = localStorage.getItem("token");
 
-            const response = await axios.put("http://localhost:8000/api/user/password", formData, {
+            const response = await axios.put("https://gerenciadordetarefasbackend.onrender.com/api/user/password", formData, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -212,7 +212,7 @@ const FormPassword = () => {
             if(response.data.message) {
                 setUpdateResponse({show: true, alert: "alert-success", message: response.data.message});
 
-                await axios.post("http://localhost:8000/api/logout", {}, {
+                await axios.post("https://gerenciadordetarefasbackend.onrender.com/api/logout", {}, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                         'Content-Type': 'application/json'
@@ -347,7 +347,7 @@ export const FormProfile = () => {
             try {
                 const token = localStorage.getItem("token");
     
-                const response = await axios.get("http://localhost:8000/api/user", {
+                const response = await axios.get("https://gerenciadordetarefasbackend.onrender.com/api/user", {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -380,7 +380,7 @@ export const FormProfile = () => {
         try {
             const token = localStorage.getItem("token");
 
-            const response = await axios.put("http://localhost:8000/api/user", formData, {
+            const response = await axios.put("https://gerenciadordetarefasbackend.onrender.com/api/user", formData, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

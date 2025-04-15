@@ -36,7 +36,7 @@ const EditPage = () => {
         if (id) {
             const fetchTask = async () => {
                 try {
-                    const response = await axios.get(`http://localhost:8000/api/tasks/${id}`, {
+                    const response = await axios.get(`https://gerenciadordetarefasbackend.onrender.com/api/tasks/${id}`, {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem("token")}`,
                         },
@@ -72,7 +72,7 @@ const EditPage = () => {
 
     const handleSave = async () => {
             try {
-                const response = await axios.put(`http://localhost:8000/api/tasks/${id}`, formData, {
+                const response = await axios.put(`https://gerenciadordetarefasbackend.onrender.com/api/tasks/${id}`, formData, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -120,7 +120,7 @@ const EditPage = () => {
     const handleDelete = async () => {
         if (id) {
             try {
-                const response = await axios.delete(`http://localhost:8000/api/tasks/${id}`, {
+                const response = await axios.delete(`https://gerenciadordetarefasbackend.onrender.com/api/tasks/${id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

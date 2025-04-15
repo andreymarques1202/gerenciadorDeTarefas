@@ -29,7 +29,7 @@ const HomePage = () => {
                     return;
                 }
     
-                const response = await axios.get("http://localhost:8000/api/user/tasks", {
+                const response = await axios.get("https://gerenciadordetarefasbackend.onrender.com/api/user/tasks", {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

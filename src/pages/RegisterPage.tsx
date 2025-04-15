@@ -127,7 +127,7 @@ const RegisterPage = () => {
         }
 
         try {
-            const response = await axios.post("http://localhost:8000/api/register", formData);
+            const response = await axios.post("https://gerenciadordetarefasbackend.onrender.com/api/register", formData);
 
             if(response.data.message) {
                 setRegisterResponse({show: true, alert: "alert-success", message: response.data.message});

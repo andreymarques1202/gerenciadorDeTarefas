@@ -54,7 +54,7 @@ export const NavbarLogged = () => {
             try {
                 const token = localStorage.getItem("token");
     
-                const response = await axios.get("http://localhost:8000/api/user", {
+                const response = await axios.get("https://gerenciadordetarefasbackend.onrender.com/api/user", {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -75,7 +75,7 @@ export const NavbarLogged = () => {
     const handleLogout = async () => {
         try {
             const token = localStorage.getItem("token");
-            const response = await axios.post("http://localhost:8000/api/logout", {}, {
+            const response = await axios.post("https://gerenciadordetarefasbackend.onrender.com/api/logout", {}, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

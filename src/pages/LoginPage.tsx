@@ -33,7 +33,7 @@ const LoginPage = () => {
         ev.preventDefault();
 
         try {
-            const response = await axios.post("http://localhost:8000/api/login", formData);
+            const response = await axios.post("https://gerenciadordetarefasbackend.onrender.com/api/login", formData);
 
             if(response.data.token) {
                 login(response.data.token);
